@@ -121,6 +121,11 @@ Universidade de Brasília - Campus Gama - FGA\\ % Your institution for the title
 
 \end{frame}
 
+%
+% INTRODUÇÂO
+%
+
+%-----------------------------------------------------------------------------------------------
 \section{Introdução}
 \begin{frame}
 
@@ -131,6 +136,7 @@ Curvas elípticas são estruturas definidas por equações cúbicas
 \end{figure}
 
 \end{frame}
+%-----------------------------------------------------------------------------------------------
 
 \begin{frame}
 \frametitle{Objetivos}
@@ -140,7 +146,13 @@ Curvas elípticas são estruturas definidas por equações cúbicas
 \item Analisar os desempenhos práticos dos algoritmos implementados
 \end{itemize}
 \end{frame}
+%-----------------------------------------------------------------------------------------------
 
+%
+% CURVAS ELIPTICAS
+%
+
+%-----------------------------------------------------------------------------------------------
 \section{Curvas Elípticas}
 \begin{frame}
 \begin{itemize}
@@ -153,7 +165,13 @@ $$ y^2 = x^3 + ax + b $$
 $$ 4a^3 + 27b^2 \neq 0$$
 \end{itemize}
 \end{frame}
+%-----------------------------------------------------------------------------------------------
 
+%
+% PROBLEMA DO LOGARITMO DISCRETO
+%
+
+%-----------------------------------------------------------------------------------------------
 \section{Problema do logaritmo discreto}
 \begin{frame}
 \begin{columns}[c]
@@ -171,15 +189,24 @@ $$ 4a^3 + 27b^2 \neq 0$$
 \end{figure}
 \end{columns}
 \end{frame}
+%-----------------------------------------------------------------------------------------------
 
+%
+% CICLO DE FLOYD
+%
+
+%-----------------------------------------------------------------------------------------------
 \section{Ciclo de Floyd}
 \begin{frame}
 
 \end{frame}
+%-----------------------------------------------------------------------------------------------
 
 %
 % POLLARD RHO ORIGINAL
 %
+
+%-----------------------------------------------------------------------------------------------
 \section{Pollard's Rho original}
 \begin{frame}
 Encontrar pares distintos $(a,b)$ e $(a',b')$ tais que
@@ -188,22 +215,22 @@ $$aP + bQ = a'P + b'Q$$
 Pelo problema do logaritmo discreto, $Q = lP$, logo, é possível obter $l$ através da equação
 $$l = (a - a')(b' - b)^{-1} \mbox{mod }n$$
 \end{frame}
-
+%------------------------------------------------------------------------------------------------
 \begin{frame}
-\begin{enumerate}
-\item Usar uma função para particionar o conjunto de pontos $E(\mathbb{F}_p)$ em 3 subconjuntos $S_1, S_2, S_3$, com tamanhos aproximados.
-\item Definir uma função de passo aleatório $f$ como função de iteração
-$$
-R_{i+1}=\left\{\begin{array}{rc}
-Q + R_i,&\mbox{se}\quad R_i \in S_1,\\
-2R_i,&\mbox{se}\quad R_i \in S_2,\\
-P + R_i,&\mbox{se}\quad R_i \in S_3,\\
-\end{array}\right.
-$$ 
-\seti
-\end{enumerate}
+  \begin{enumerate}
+    \item Usar uma função para particionar o conjunto de pontos $E(\mathbb{F}_p)$ em 3 subconjuntos $S_1, S_2, S_3$, com tamanhos aproximados.
+    \item Definir uma função de passo aleatório $f$ como função de iteração
+    $$
+      R_{i+1}=\left\{\begin{array}{rc}
+      Q + R_i,&\mbox{se}\quad R_i \in S_1,\\
+      2R_i,&\mbox{se}\quad R_i \in S_2,\\
+      P + R_i,&\mbox{se}\quad R_i \in S_3,\\
+      \end{array}\right.
+    $$ 
+    \seti
+  \end{enumerate}
 \end{frame}
-
+%------------------------------------------------------------------------------------------------
 \begin{frame}
   \begin{enumerate}
     \conti
@@ -227,25 +254,60 @@ $$
     \conti
   \end{enumerate}
 \end{frame}
+%--------------------------------------------------------------------------------------------------
 
+%
+% POLLARD RHO UNICO PROCESSADOR
+%
+
+%---------------------------------------------------------------------------------------------------
 \section{Pollard's Rho com único processador}
 \begin{frame}
-asdfasdfasdfa
-\end{frame}
 
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+
+%
+% POLLARD RHO MULTIPLOS PROCESSADORES
+%
+
+%---------------------------------------------------------------------------------------------------
 \section{Pollard's Rho com múltiplos processadores}
 \begin{frame}
-asdfasdfasdfa
-\end{frame}
 
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+
+%
+% POLLARD RHO AUTOMORFISMO
+%
+
+%---------------------------------------------------------------------------------------------------
 \section{Pollard's Rho com automorfismo}
 \begin{frame}
-asdfasdfasdfa
+  \begin{itemize}
+    \item Seja o conjunto de pontos de uma curva elíptica $E(\mathbb{F}_p)$, o ponto $P \in E(\mathbb{F}_p)$, de ordem $n$ e $\langle P \rangle$ o subconjunto gerado por $P$.
+    \item Seja o automorfismo $\psi: \langle P \rangle \to \langle P \rangle$ de ordem $t$, ou seja, $\psi^t(R) = R$.
+    \item Pode-se definir uma relação de equivalência $R_1 \sim R_2$ sempre que $R_1 = \psi^j(R_2)$, para $j \in [0, t-1]$.
+    \item Agrupar os elementos equivalentes em classes de equivalência
+    $$
+      [R] = \{R, \psi(R), \psi^2(R), \dots, \psi^{l-1}(R)\}
+    $$
+    onde $l$ é o menor divisor positivo da ordem $t$ tal que $\psi^l(R) = R$.
+    \item Cada classe de equivalência tem um representante $\overline{R}$.
+  \end{itemize}
 \end{frame}
+%---------------------------------------------------------------------------------------------------
 
+%
+% TRABALHOS FUTUROS
+%
+
+%---------------------------------------------------------------------------------------------------
 \section{Trabalhos futuros}
 \begin{frame}
-asdfasdfasdfa
+
 \end{frame}
+%---------------------------------------------------------------------------------------------------
 
 \end{document}
