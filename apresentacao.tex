@@ -174,20 +174,20 @@ $$ 4a^3 + 27b^2 \neq 0$$
 %-----------------------------------------------------------------------------------------------
 \section{Problema do logaritmo discreto}
 \begin{frame}
-\begin{columns}[c]
-\column{.45\textwidth}
-\begin{itemize}
-\item Sejam dois pontos $P$ e $Q$ pertencentes à uma curva, encontrar o valor de $x$ tal que $xP = Q$
-\item Computacionalmente caro
-\item Um valor muito alto de k inviabiliza análise de força bruta
-\item Existem alguns algoritmos que tentam resolver este problema
-\end{itemize}
+  \begin{columns}[c]
+    \column{.45\textwidth}
+      \begin{itemize}
+        \item Sejam dois pontos $P$ e $Q$ pertencentes à uma curva, encontrar o valor de $x$ tal que $xP = Q$
+        \item Computacionalmente caro
+        \item Um valor muito alto de k inviabiliza análise de força bruta
+        \item Existem alguns algoritmos que tentam resolver este problema
+      \end{itemize}
 
-\column{.5\textwidth}
-\begin{figure}
-\includegraphics[scale=0.3]{multiplicacao_ponto}
-\end{figure}
-\end{columns}
+    \column{.5\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.3]{multiplicacao_ponto}
+      \end{figure}
+  \end{columns}
 \end{frame}
 %-----------------------------------------------------------------------------------------------
 
@@ -198,7 +198,52 @@ $$ 4a^3 + 27b^2 \neq 0$$
 %-----------------------------------------------------------------------------------------------
 \section{Ciclo de Floyd}
 \begin{frame}
+  \begin{itemize}
+    \item Importante para detectar ocorrência de um ciclo em sequências arbitrárias
+    \item Também chamado de algoritmo - ``lebre e tartaruga''
+    \item Melhor caso: $\lambda$
+    \item Pior caso: $\mu + \lambda$
+  \end{itemize}
 
+  \begin{figure}
+    \includegraphics[scale=0.2]{floyd_cycle}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step1}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step2}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step3}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step4}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step5}
+  \end{figure}
+\end{frame}
+%-----------------------------------------------------------------------------------------------
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.3]{floyd_step6}
+  \end{figure}
 \end{frame}
 %-----------------------------------------------------------------------------------------------
 
